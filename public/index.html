@@ -225,13 +225,16 @@ $(document).ready(function() {
         count = count + 1;
 
         $.ajax({
-            dataType: 'JSON',
             url: 'https://bccyzexrlqorhvwoenjm.supabase.co/functions/v1/next',
             type: 'POST',
-            data: {
+            contentType: 'application/json',
+            data: JSON.stringify({
                 ai: ai,
                 pr: pr,
-            },
+                ph: $('#ph').val() || '',
+                rec_ai: $('#rec_ai').val() || ''
+            }),
+            dataType: 'json',
             // data: $('#contact').serialize(),
             beforeSend: function(xhr) {
                 $('#submit-btn').val('Verifing...');
